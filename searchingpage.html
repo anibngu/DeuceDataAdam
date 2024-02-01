@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tennis Player Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e1f5e1; 
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #15301f; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .topnav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s ease;
+            padding: 14px 16px;
+        }
+
+        .topnav a.news { 
+            background-color: #45a049;
+        }
+
+        .topnav a:hover {
+            background-color: #45a049;
+        }
+
+        .logo img {
+            max-height: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #15301f;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #45a049; 
+            color: #fff;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topnav">
+        <div class="logo">
+            <img src="Deuce (3).png" alt="your logo">
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Dashboard</a>
+        <a class="news" href="#">Player Profile</a>
+        <a href="#">Sign Out</a>
+    </div>
+
+    <h1>Tennis Player Search</h1>
+
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search for players">
+
+    <table id="playerTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>1001</td>
+                <!-- <td>Roger Federer</td> -->
+                <td><a href="anatester.html">Roger Federer</a></td>
+                <td>Switzerland</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>Serena Williams</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>Rafael Nadal</td>
+                <td>Spain</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script>
+        function searchTable() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("playerTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1]; // Index 1 corresponds to the player names
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Player Statistics</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e1f5e1; /* Pale Green Background */
+            color: #333;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #15301f;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .topnav a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s ease;
+            padding: 14px 16px;
+        }
+
+        .topnav a.active,
+        .topnav a.statistics { /* Added a specific class for "Statistics" link */
+            background-color: #45a049;
+            color: #333;
+        }
+
+        .topnav a:hover {
+            background-color: #45a049;
+            color: #333;
+        }
+
+        .logo img {
+            max-height: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: #15301f;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #ffffff;
+            /* background-color: #f0f8f0; */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #15301f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ffffff;
+            /* background-color: #e1f5e1; */
+        }
+
+    </style>
+</head>
+<body>
+<div class="topnav">
+    <div class="logo">
+        <img src="Deuce (3).png" alt="your logo">
+    </div>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a class="statistics" href="#statistics">Player Profile</a>   
+    <a href="#Sign Out">Sign Out</a>
+</div>
+
+<div class="title-container">
+    <div class="title">Player Profile</div>
+    <p>Statistics of Current Tennis Pros</p>
+</div>
+
+<main>
+    <section>
+        <h2>Player Information</h2>
+        <p><strong>Name:</strong> Team Nike </p>
+        <p><strong>Age:</strong> ? </p>
+        <p><strong>Country:</strong> ? </p>
+        <p><strong>Birthdate:</strong> ? </p>
+        <p><strong>Contact Details:</strong> 071234567</p>
+    </section>
+
+    <section>
+        <h2>Player Statistics</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>value</th>
+            </tr>
+            <tr>
+                <td>Matches won</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Matches lost</td>
+                <td>103</td>
+            </tr>
+            <tr>
+                <td>Highest ranking</td>
+                <td>5</td>
+            </tr>
+            <!-- Additional empty rows -->
+            <tr>
+                <td>Matches won @ X tourney level</td>
+                <td>n</td>
+            </tr>
+            <tr>
+                <td>Matches won @ X tourney level</td>
+                <td>m</td>
+            </tr>
+            <tr>
+                <td>Matches won @ X tourney level</td>
+                <td>m</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </section>
+</main>
+
+</body>
+</html>

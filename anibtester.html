@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('backg.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #15301f; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+
+        .topnav a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 17px;
+            transition: background-color 0.3s ease;
+            padding: 14px 16px;
+        }
+
+        .topnav a.active,
+        .topnav a.signin {
+            background-color: #45a049;
+            color: #333;
+        }
+
+        .topnav a:hover {
+            background-color: #45a049;
+            color: #333;
+        }
+
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .title {
+            font-size: 36px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: #15301f;
+            margin-bottom: 10px;
+        }
+
+        main {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #f0f8f0;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-left: 230px; 
+        }
+
+        form {
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #45a049;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #15301f;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="topnav">
+    <a href="#home"></a> 
+    <a href="#about"></a>
+    <a href="#Sign Out"></a>
+</div>
+
+<div class="title-container">
+    <div class="title"></div>
+</div>
+
+<main>
+    <form>
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <a href="landing.html">
+        <button type="button" class="btn">Sign In</button> 
+          </a>
+    </form>
+</main>
+
+</body>
+</html>
